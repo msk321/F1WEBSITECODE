@@ -24,6 +24,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 header .logo-container {
@@ -39,7 +40,7 @@ header .logo {
 header h1 {
     margin: 0;
     font-size: 24px;
-    color: #f00; /* Red color for the title */
+    color: #f00;
 }
 
 header nav ul {
@@ -66,44 +67,142 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #000;
-    background-color: #f00; /* Red color on hover */
+    background-color: #f00;
+}
+
+.hero {
+    background: url('F1 Banner V1.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    min-height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+    color: rgb(255, 253, 253);
+    text-shadow: 2px 2px 4px #edecec;
+    animation: fadeInDown 2s ease;
+}
+
+.hero p {
+    font-size: 2vw;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px #ffffff;
+    animation: fadeInUp 2s ease;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 2vw;
+    color: #fff;
+    background-color: #f00;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 2s ease;
+}
+
+.cta-button:hover {
+    background-color: #c00;
+    transform: scale(1.1);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-down::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
 }
 
 .content-section {
     padding: 100px 20px;
     background-color: #111;
-    border-top: 2px solid #f00; /* Red border for section separation */
+    border-top: 2px solid #f00;
     text-align: center;
     flex-grow: 1;
-    margin-top: 80px; /* Offset for fixed header */
 }
 
 .content-section h2 {
-    font-size: 32px;
+    font-size: 4vw;
     margin-bottom: 20px;
-    color: #f00; /* Red color for section titles */
+    color: #f00;
     animation: fadeIn 2s ease;
 }
 
 .content-section p {
-    font-size: 18px;
+    font-size: 2vw;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    margin: 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 2.5vw;
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    font-size: 2vw;
 }
 
 footer {
     background-color: #111;
     padding: 20px 0;
     text-align: center;
-    border-top: 2px solid #f00; /* Red border at the top of footer */
+    border-top: 2px solid #f00;
     margin-top: auto;
-    width: 100%;
 }
 
 footer p {
     margin: 0;
-    font-size: 14px;
+    font-size: 1.5vw;
 }
 
 footer .social-links {
@@ -172,12 +271,14 @@ footer .social-links a:hover img {
     }
 
     header h1 {
-        font-size: 20px;
+        font-size: 6vw;
     }
 
     header nav ul {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
+        display: block;
     }
 
     header nav ul li {
@@ -185,29 +286,87 @@ footer .social-links a:hover img {
         margin-top: 10px;
     }
 
+    header nav ul li a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 30px 20px;
+        background-size: cover;
+    }
+
+    .hero h2 {
+        font-size: 6vw;
+    }
+
+    .hero p {
+        font-size: 4vw;
+    }
+
+    .cta-button {
+        font-size: 4vw;
+    }
+
     .content-section h2 {
-        font-size: 28px;
+        font-size: 6vw;
     }
 
     .content-section p {
-        font-size: 16px;
+        font-size: 4vw;
+    }
+
+    .team-member h3 {
+        font-size: 5vw;
+    }
+
+    .team-member p {
+        font-size: 4vw;
     }
 
     footer p {
-        font-size: 12px;
+        font-size: 3vw;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        min-height: 60vh;
+        padding: 20px 10px;
+        background-size: cover;
+    }
+
+    .hero h2 {
+        font-size: 8vw;
+    }
+
+    .hero p {
+        font-size: 6vw;
+    }
+
+    .cta-button {
+        font-size: 5vw;
+        padding: 8px 16px;
+    }
+
     .content-section h2 {
-        font-size: 24px;
+        font-size: 8vw;
     }
 
     .content-section p {
-        font-size: 14px;
+        font-size: 6vw;
+    }
+
+    .team-member h3 {
+        font-size: 7vw;
+    }
+
+    .team-member p {
+        font-size: 6vw;
     }
 
     footer p {
-        font-size: 10px;
+        font-size: 4vw;
     }
 }
