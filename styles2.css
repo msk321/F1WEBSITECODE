@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #111;
+    padding: 20px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #f00; /* Red color for the title */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    color: #000;
+    background-color: #f00; /* Red color on hover */
+}
+
+.content-section {
+    padding: 100px 20px;
+    background-color: #111;
+    border-top: 2px solid #f00; /* Red border for section separation */
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 80px; /* Offset for fixed header */
+}
+
+.content-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f00; /* Red color for section titles */
+    animation: fadeIn 2s ease;
+}
+
+.content-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #f00; /* Red border at the top of footer */
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+footer .social-links a:hover img {
+    transform: scale(1.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+    }
+
+    .content-section p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section h2 {
+        font-size: 24px;
+    }
+
+    .content-section p {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
