@@ -74,9 +74,9 @@ header nav ul li a:hover {
     background-size: contain; /* Ensure the entire image is visible */
     background-position: center center; /* Center the image */
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px; /* Adjusted padding to account for fixed header */
     position: relative;
-    height: 80vh; /* Set the height of the hero section */
+    height: calc(100vh - 70px); /* Adjusted height to account for fixed header */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,12 +285,12 @@ footer .social-links a:hover img {
     }
 
     .hero {
-        height: 50vh; /* Adjust height for smaller screens */
-        padding: 30px 20px;
+        height: 60vh; /* Adjust height for smaller screens */
+        padding: 70px 20px 30px; /* Adjusted padding to account for fixed header */
     }
 
     .hero h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .hero p {
@@ -323,13 +323,32 @@ footer .social-links a:hover img {
 }
 
 @media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
     .hero {
-        height: 40vh; /* Adjust height for smaller screens */
-        padding: 20px 10px;
+        height: 50vh; /* Adjust height for smaller screens */
+        padding: 70px 10px 20px; /* Adjusted padding to account for fixed header */
     }
 
     .hero h2 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .hero p {
@@ -341,12 +360,21 @@ footer .social-links a:hover img {
         padding: 8px 16px;
     }
 
+    .content-section {
+        padding: 80px 10px;
+    }
+
     .content-section h2 {
         font-size: 24px;
     }
 
     .content-section p {
         font-size: 14px;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
     }
 
     .team-member h3 {
