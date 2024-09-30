@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,6 +10,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header */
 header {
     background-color: #111;
     padding: 20px 0;
@@ -39,8 +41,8 @@ header .logo {
 
 header h1 {
     margin: 0;
-    font-size: 24px;
-    color: #f00;
+    font-size: 30px;
+    color: #f00; /* Red to align with the theme */
 }
 
 header nav ul {
@@ -67,16 +69,17 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #000;
-    background-color: #f00;
+    background-color: #f00; /* Red background on hover */
 }
 
+/* Hero Section */
 .hero {
     background: url('F1 Banner V1.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    padding: 100px 20px;
+    padding: 150px 20px;
     position: relative;
-    min-height: 100vh; /* Full height */
+    min-height: 80vh; /* Reduced height for a better fit */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,16 +89,16 @@ header nav ul li a:hover {
 .hero h2 {
     font-size: 4vw;
     margin-bottom: 20px;
-    color: rgb(255, 253, 253);
-    text-shadow: 2px 2px 4px #edecec;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000; /* Increased contrast for better readability */
     animation: fadeInDown 2s ease;
 }
 
 .hero p {
-    font-size: 2vw;
+    font-size: 1.8vw;
     max-width: 600px;
     margin: 0 auto;
-    text-shadow: 1px 1px 2px #ffffff;
+    text-shadow: 1px 1px 2px #000;
     animation: fadeInUp 2s ease;
 }
 
@@ -118,6 +121,7 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Scroll Down Icon */
 .scroll-down {
     position: absolute;
     bottom: 20px;
@@ -142,32 +146,51 @@ header nav ul li a:hover {
     transform: rotate(45deg);
 }
 
+/* Content Section */
 .content-section {
     padding: 100px 20px;
     background-color: #111;
-    border-top: 2px solid #f00;
+    border-top: 3px solid #f00;
     text-align: center;
     flex-grow: 1;
 }
 
 .content-section h2 {
-    font-size: 4vw;
+    font-size: 3.5vw;
     margin-bottom: 20px;
-    color: #f00;
+    color: #f00; /* Red for consistency with theme */
     animation: fadeIn 2s ease;
 }
 
-.content-section p {
-    font-size: 2vw;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+.content-section h3 {
+    font-size: 2.5vw; /* Subheadings with more emphasis */
+    margin-top: 40px;
+    color: #f39c12; /* A slightly different shade for visual contrast */
 }
 
+.content-section h4 {
+    font-size: 2vw;
+    color: #e67e22; /* Distinct color for section subheadings */
+    margin-top: 30px;
+    text-align: left;
+    border-bottom: 2px solid #f00;
+    padding-bottom: 10px;
+}
+
+.content-section p {
+    font-size: 1.5vw; /* Smaller font size for body text */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.75; /* Improved readability */
+    color: #ddd;
+}
+
+/* Team Section */
 .team-members {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
 .team-member {
@@ -181,28 +204,33 @@ header nav ul li a:hover {
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
+    border: 3px solid #f00; /* Adding a red border */
 }
 
 .team-member h3 {
-    font-size: 2.5vw;
+    font-size: 2.2vw;
     margin: 10px 0 5px;
+    color: #fff;
 }
 
 .team-member p {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    color: #ddd;
 }
 
+/* Footer */
 footer {
     background-color: #111;
     padding: 20px 0;
     text-align: center;
-    border-top: 2px solid #f00;
+    border-top: 3px solid #f00; /* Increased width for more emphasis */
     margin-top: auto;
 }
 
 footer p {
     margin: 0;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    color: #fff;
 }
 
 footer .social-links {
@@ -225,12 +253,14 @@ footer .social-links a:hover img {
     transform: scale(1.2);
 }
 
+/* Utility Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -265,56 +295,16 @@ footer .social-links a:hover img {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header h1 {
-        font-size: 6vw;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        display: block;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    header nav ul li a {
-        width: 100%;
-        text-align: left;
-    }
-
-    .hero {
-        min-height: 60vh;
-        padding: 30px 20px;
-        background-size: cover;
-    }
-
-    .hero h2 {
-        font-size: 6vw;
-    }
-
-    .hero p {
-        font-size: 4vw;
-    }
-
-    .cta-button {
-        font-size: 4vw;
-    }
-
     .content-section h2 {
-        font-size: 6vw;
+        font-size: 5vw;
+    }
+
+    .content-section h3, .content-section h4 {
+        font-size: 4vw;
     }
 
     .content-section p {
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     .team-member h3 {
@@ -331,42 +321,28 @@ footer .social-links a:hover img {
 }
 
 @media (max-width: 480px) {
-    .hero {
-        min-height: 60vh;
-        padding: 20px 10px;
-        background-size: cover;
-    }
-
-    .hero h2 {
-        font-size: 8vw;
-    }
-
-    .hero p {
+    .content-section h2 {
         font-size: 6vw;
     }
 
-    .cta-button {
+    .content-section h3, .content-section h4 {
         font-size: 5vw;
-        padding: 8px 16px;
-    }
-
-    .content-section h2 {
-        font-size: 8vw;
     }
 
     .content-section p {
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .team-member h3 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     .team-member p {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     footer p {
         font-size: 4vw;
     }
 }
+
